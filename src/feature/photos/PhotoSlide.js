@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const TaskSlice = createSlice({
-  name: "photo",
+export const PhotoSlice = createSlice({
+  name: "Myphoto",
   initialState: {
     status: "idle",
     data: [],
@@ -12,20 +12,9 @@ export const TaskSlice = createSlice({
       state.data.push(action.payload);
     },
     removePhoto: (state, action) => {
-      return state.filter((character) => character.id !== action.payload);
+      state.data = state.data.filter((image) => image.id !== action.payload.id);
     },
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(GetTaskListThunk.pending, (state, action) => {
-        state.status = "pending";
-      })
-      .addCase(GetTaskListThunk.fulfilled, (state, action) => {
-        state.status = "fulfilled";
-        state.data = action.payload;
-      })
-      .addCase(GetTaskListThunk.rejected, (state, action) => {
-        state.status = "rejected";
-      });
-  },
 });
+
+export const { addPhoto, removePhoto } = PhotoSlice.actions;
