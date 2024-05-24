@@ -1,2 +1,2 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-export const GetTaskListThunk = createAsyncThunk();
+export const GetPhotosThunk = createAsyncThunk();
