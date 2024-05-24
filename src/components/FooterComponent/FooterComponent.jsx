@@ -2,7 +2,12 @@
 export const FooterComponent = () => {
 return (<>
     <footer className='FooterContainer'>
-        <h3 className='FooterContainer__title'>Sin Copyright - Free Code</h3>
+        <img></img>
+        <h2>All Photos Copyright</h2>
+        <div className='FooterContainerimg'>
+            <img className='FooterContainer__imagen1'/>
+            <img className='FooterContainer__imagen2'/>
+        </div>
     </footer>
     </>)
     }
