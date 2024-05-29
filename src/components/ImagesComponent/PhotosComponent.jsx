@@ -11,9 +11,9 @@ export const ImageComponent = ({
     date, 
 }) => {
     return (
-        <div className="image-component" key={id}>
+        <div className="(I" key={id}>
             <img src={image} alt={description} width={width} height={height} />
-            <div className="image-info">
+            <div className="">
                 <p><strong>Author:</strong> {authorName}</p>
                 <p><strong>Description:</strong> {description}</p>
                 <p><strong>Likes:</strong> {likes}</p>

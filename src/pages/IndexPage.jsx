@@ -4,7 +4,7 @@ import { NavbarComponent } from "../components/Navbarcomponent/NavbarComponent";
 import { FooterComponent } from "../components/FooterComponent/FooterComponent";
 import { HeaderComponent } from "../components/HeaderComponent/HeaderComponent";
 import { GetImagesThunk } from "../feature/Search/SearchThunk";
-import { ImageComponent } from "../components/PhotosComponent/PhotosComponent";
+import { ImageComponent } from "../components/ImagesComponent/PhotosComponent";
 
 export const IndexPage = () => {
     const dispatch = useDispatch();
