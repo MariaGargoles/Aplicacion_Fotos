@@ -1,0 +1,136 @@
+
+
+.pop-up-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 37.5rem;
+    z-index: 1000;
+}
+
+.pop-up-modal__title {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.pop-up-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.pop-up-modal__description-title {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.pop-up-modal__description {
+    margin-bottom: 1rem;
+}
+
+.pop-up-modal__button-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.pop-up-modal__button-container--closed {
+    display: none;
+}
+
+.pop-up-modal__button-container__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.pop-up-modal__button-container__button:hover {
+    background-color: #0056b3;
+}
+
+.pop-up-modal__modify-description {
+    display: none;
+}
+
+.pop-up-modal__modify-description--open {
+    display: block;
+}
+
+.pop-up-modal__modify-description__title {
+    margin-bottom: 1rem;
+}
+
+.pop-up-modal__modify-description__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.pop-up-modal__modify-description__input {
+    width: calc(100% - 20px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pop-up-modal__modify-description__button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pop-up-modal__modify-description__button-container__button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.pop-up-modal__modify-description__button-container__button:hover {
+    background-color: #218838;
+}
+
+.pop-up-modal__modify-description__button-container__cancel {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 0.3px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+
+.pop-up-modal__property {
+    margin-top: 0.3rem;
+}
+
+.open-modal-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 1.2rem;
+}
+
+.open-modal-button:hover {
+    background-color: #0056b3;
+}
