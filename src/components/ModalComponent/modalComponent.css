@@ -72,7 +72,7 @@
 
 .pop-up-modal__modify-description__close {
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     right: 1rem;
     cursor: pointer;
 }
