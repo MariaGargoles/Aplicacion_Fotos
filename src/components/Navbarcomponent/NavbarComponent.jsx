@@ -8,7 +8,7 @@ export const NavbarComponent = () => {
         <nav className='NavarContainer'> 
             <div className='NavarContainerimg'>
                 <img className='NavarContainer__imagen1'/>
-                <h2>All Photos</h2>
+                <h2 ClassName='NavarContainer__title'>All Photos</h2>
             </div>
             <ul className='NavarContainer__Menu'>
                 <NavLink  to="/" className='NavarContainer__Menu--item'>Home</NavLink >

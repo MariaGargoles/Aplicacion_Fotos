@@ -1,3 +1,28 @@
-.NavarContainer {
+*{
+    margin: 0 auto;
+    padding: 0;
     
+}
+
+.NavarContainer {
+ display: flex;
+ justify-content: space-evenly;  
+ margin: 1.5rem;
+ padding: 1rem;
+}
+
+.NavarContainer__title {
+    font-size: 2em;
+}
+
+.NavarContainer__Menu {
+    display: inline;
+    padding-top: 1rem;
+}
+
+.NavarContainer__Menu--item {
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
