@@ -8,8 +8,8 @@ import { ImageComponent } from "../components/ImagesComponent/PhotosComponent";
 
 export const IndexPage = () => {
     const dispatch = useDispatch();
-    const images = useSelector(state => state.Myphoto.data);  // Cambiado aquí
-    const imagesStatus = useSelector(state => state.Myphoto.status);  // Cambiado aquí
+    const images = useSelector(state => state.Myphoto.data);  
+    const imagesStatus = useSelector(state => state.Myphoto.status);  
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
