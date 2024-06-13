@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { GetImagesThunk } from "./PhotoThunk";
 
 export const PhotoSlice = createSlice({
   name: "Myphoto",
@@ -25,6 +26,20 @@ export const PhotoSlice = createSlice({
       });
       localStorage.setItem("favorites", JSON.stringify(state.data));
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(GetImagesThunk.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(GetImagesThunk.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        state.data = action.payload;
+      })
+      .addCase(GetImagesThunk.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.error.message;
+      });
   },
 });
 

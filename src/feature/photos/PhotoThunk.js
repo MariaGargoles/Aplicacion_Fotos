@@ -10,6 +10,7 @@ export const GetImagesThunk = createAsyncThunk("Search/GetImages", async () => {
     });
     if (request.ok) {
       const Images = await request.json();
+      console.log(Images);
       return Images;
     }
     throw new Error("Failed to fetch images");
