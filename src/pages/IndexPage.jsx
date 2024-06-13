@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavbarComponent } from "../components/Navbarcomponent/NavbarComponent";
 import { FooterComponent } from "../components/FooterComponent/FooterComponent";
 import { HeaderComponent } from "../components/HeaderComponent/HeaderComponent";
-import { GetImagesThunk } from "../feature/Search/SearchThunk";
+import { GetImagesThunk } from "../feature/photos/PhotoThunk";
 import { ImageComponent } from "../components/ImagesComponent/PhotosComponent";
 
 export const IndexPage = () => {
     const dispatch = useDispatch();
-    const images = useSelector(state => state.images.items);
-    const imagesStatus = useSelector(state => state.images.status);
+    const images = useSelector(state => state.Myphoto.data);  // Cambiado aquí
+    const imagesStatus = useSelector(state => state.Myphoto.status);  // Cambiado aquí
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
