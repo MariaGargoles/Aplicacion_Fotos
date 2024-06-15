@@ -5,19 +5,21 @@
 }
 
 .NavarContainer {
- display: flex;
- justify-content: space-evenly;  
+ display: block;
  margin: 1.5rem;
- padding: 1rem;
+ padding: 2rem;
+ width: 100%;
 }
 
 .NavarContainer__title {
     font-size: 2em;
+    font-family: "Roboto", sans-serif;
 }
 
 .NavarContainer__Menu {
     display: inline;
     padding-top: 1rem;
+    padding-left: 10rem;
 }
 
 .NavarContainer__Menu--item {
@@ -25,4 +27,5 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    font-family: "Roboto", sans-serif;
 }

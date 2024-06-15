@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './PhotosComponent.css'
 export const ImageComponent = ({ 
     id, 
     authorName, 
@@ -11,9 +11,9 @@ export const ImageComponent = ({
     date, 
 }) => {
     return (
-        <div className="(I" key={id}>
-            <img src={image} alt={description} width={width} height={height} />
-            <div className="">
+        <div className="ImagesContainer" key={id}>
+            <img  className="ImagesContainer__img" src={image} alt={description} width={width} height={height} />
+            <div className="ImagesContainer__data">
                 <p><strong>Author:</strong> {authorName}</p>
                 <p><strong>Description:</strong> {description}</p>
                 <p><strong>Likes:</strong> {likes}</p>
