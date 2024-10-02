@@ -1,5 +1,6 @@
 import React from 'react';
 import './PhotosComponent.css'
+import { IconsFavoriteComponent } from '../IconFavComponent/IconFavComponent';
 export const ImageComponent = ({ 
     id, 
     authorName, 
@@ -22,6 +23,18 @@ export const ImageComponent = ({
                     <p><strong>Date:</strong> {new Date(date).toLocaleDateString()}</p>
                     
                 </div>
+                : 
+               {/* <IconsFavoriteComponent 
+                    isSearchPage={false} 
+                    id={props.id} 
+                    image={props.image} 
+                    description={props.description} 
+                    height={props.height} 
+                    width={props.width} 
+                    likes={props.likes} 
+                    date={props.date}
+                />*/}
+            
             </div>
         
             
