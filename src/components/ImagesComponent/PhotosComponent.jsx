@@ -17,10 +17,10 @@ export const ImageComponent = ({
             
                 <img  className="ImagesContainer__img" src={image} alt={description} width={width} height={height} />
                 <div className="ImagesContainer__data">
-                    <p><strong>Author:</strong> {authorName}</p>
-                    <p><strong>Description:</strong> {description}</p>
-                    <p><strong>Likes:</strong> {likes}</p>
-                    <p><strong>Date:</strong> {new Date(date).toLocaleDateString()}</p>
+                    <p className='data__text'><strong>Author:</strong> {authorName}</p>
+                    <p className='data__text'><strong>Description:</strong> {description}</p>
+                    <p className='data__text'><strong>Likes:</strong> {likes}</p>
+                    <p className='data__text'><strong>Date:</strong> {new Date(date).toLocaleDateString()}</p>
                     
                 </div>
                 : 
