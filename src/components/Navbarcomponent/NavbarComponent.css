@@ -5,14 +5,20 @@
     
 }
 
+body {
+    background-image: url("../../assets/4907198.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .NavarContainer {
  display: flex;
  justify-content: space-around;
     align-items: center;
     box-shadow: 0em 0.18em 0.3em 0em rgba(0, 0, 0, 0.29);
-    background-image: url(../../assets/4907198.jpg);
+    background-image: url("../../assets/4907198.jpg");
     background-repeat: no-repeat;
-    opacity: 0.89;
+    background-size: cover;
     
 }
 
