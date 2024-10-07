@@ -36,6 +36,12 @@
     text-transform: uppercase;
     padding: 1rem 2rem;
     border-radius: 5px;
+    background-color: #d0ece7;
+}
+
+.Header__Article__MyPhotosButton:hover {
+    
+    background-color:  #73c6b6;
 }
 
 .Header__VideoContainer {
