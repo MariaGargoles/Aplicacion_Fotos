@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GetImagesThunk } from "./PhotoThunk";
+import { GetImagesThunk, GetSearchPhotoThunk } from "./PhotoThunk";
 
 export const PhotoSlice = createSlice({
   name: "Myphoto",
@@ -39,7 +39,21 @@ export const PhotoSlice = createSlice({
       .addCase(GetImagesThunk.rejected, (state, action) => {
         state.status = "rejected";
         state.error = action.error.message;
+      })
+      .addCase(GetSearchPhotoThunk.pending, (state) => {
+        state.status =  "pending";
+        state.error = false;
+      })
+      .addCase(GetSearchPhotoThunk.fulfilled, (state, action) => {
+        state.status = "fullfilled";
+        state.data = action.payload;
+      })
+      .addCase(GetSearchPhotoThunk.rejected, (state) => {
+        state.status = "rejected";
+        state.error = false;
+
       });
+
   },
 });
 
