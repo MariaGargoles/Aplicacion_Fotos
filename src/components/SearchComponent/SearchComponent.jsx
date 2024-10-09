@@ -1,35 +1,30 @@
-import * as React from 'react';
-import ButtonGroup from '@mui/joy/ButtonGroup';
-import IconButton from '@mui/joy/IconButton';
-import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite } from '../../Features/Favorites/FavoritesSlice';
-import { saveAs } from 'file-saver';
+import { useDispatch } from 'react-redux'
+import { GetSearchPhotoThunk, GetImagesThunk } from "../../feature/photos/PhotoThunk"
+    
+ 
+    
 
 export const SearchComponent = ({ isSearchPage, id, authorName, image, description, width, height, likes, date, downloadLink, setImageAdded }) => {
-
-    const favorites = useSelector(state => state.Favorites.data);
-    const dispatch = useDispatch();
-
-    const addFavoriteHandler = (event) => {
-        event.preventDefault();
-        dispatch(addFavorite({ isSearchPage: false, id: id, authorName: authorName, image: image, description: description, width: width, height: height, likes: likes, date: date, downloadLink: downloadLink }));
-        setImageAdded(true);
+    
+        const dispatch = useDispatch()
+    
+        const submitSearchHandler = (event) => {
+            if (event.key === 'Enter') {
+                if (event.target.value !== '') {
+                    dispatch(GetSearchPhotoThunk(event.target.value))
+                } else {
+                    dispatch(GetImagesThunk())
+                }
+            }
+        }
+    
+    
+        return (
+            <div className='InputComponent'>
+                <input type = 'text' placeholder = 'search photos in the gallery' className="InputComponent__content" onKeyDown={submitSearchHandler}/>
+                <span className='material-symbols-outlined InputComponent__content__icon'>search</span>
+            </div>
+        )
     }
+   
 
-    return (
-        <>
-            <ButtonGroup className="image-component-buttons" aria-label="outlined primary button group">
-                <IconButton onClick={addFavoriteHandler}>
-                    <span className="image-component-buttons-favorite material-symbols-outlined">
-                        favorite
-                    </span>
-                </IconButton>
-                <IconButton onClick={() => saveAs(downloadLink)}>
-                    <span className="image-component-buttons-download material-symbols-outlined">
-                        download
-                    </span>
-                </IconButton>
-            </ButtonGroup>
-        </>
-    );
-}
