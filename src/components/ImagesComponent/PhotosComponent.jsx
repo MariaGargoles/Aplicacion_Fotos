@@ -51,7 +51,7 @@ export const ImageComponent = () => {
             <div className="ImagesContainer" key={index}>
               <img 
                 className="ImagesContainer__img" 
-                src={image.urls.full} 
+                src={image.urls.regular} 
                 alt={image.alt_description || 'Image'} 
                 width={image.width} 
                 height={image.height} 
