@@ -45,7 +45,7 @@ export const PhotoSlice = createSlice({
         state.error = false;
       })
       .addCase(GetSearchPhotoThunk.fulfilled, (state, action) => {
-        state.status = "fullfilled";
+        state.status = "fulfilled";
         state.data = action.payload;
       })
       .addCase(GetSearchPhotoThunk.rejected, (state) => {

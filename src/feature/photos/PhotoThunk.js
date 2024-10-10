@@ -26,7 +26,7 @@ export const GetImagesThunk = createAsyncThunk("Search/GetImages", async () => {
 
 export const GetSearchPhotoThunk = createAsyncThunk('search/getSearchPhoto', async (text) => {
   try {
-      const response = await fetch(`https://api.unsplash.com/search/photos/?per_page=100&query=${text}`, {
+      const response = await fetch(`https://api.unsplash.com/search/photos/?per_page=30&query=${text}`, {
           headers: {
             Authorization:
             "Client-ID T-UKRbKpAszHgiQ2YOzW132ApK0QRo6Hcsg4dVM10rY",
