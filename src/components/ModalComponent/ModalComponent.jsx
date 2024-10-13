@@ -1,4 +1,4 @@
-//import './ModalComponent.css'
+import './ModalComponent.css'
 import { useState, useEffect } from 'react';
 
 export const ModalComponent = ({ isOpen, onClose, description, width, height, likes, date, onSubmit }) => {
