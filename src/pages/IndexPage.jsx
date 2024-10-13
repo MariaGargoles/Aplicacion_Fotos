@@ -6,7 +6,7 @@ import { HeaderComponent } from "../components/HeaderComponent/HeaderComponent";
 import { GetImagesThunk } from "../feature/photos/PhotoThunk";
 import { ImageComponent } from "../components/ImagesComponent/PhotosComponent";
 import "../components/ImagesComponent/PhotosComponent.css"
-import { SearchComponent } from "../components/SearchComponent/SearchComponent";
+
 
 export const IndexPage = () => {
   

@@ -1,59 +1,33 @@
-import { useDispatch, useSelector } from "react-redux"
-import { useState } from "react"
-import { toast } from "sonner"
-import { saveAs } from 'file-saver'
+import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { removeFavorite, editDescription } from "../../feature/favorite/FavoriteSlice";
+import { toast } from "sonner";
+import { saveAs } from 'file-saver';
+import './IconsComponent.css'; 
 
-export const IconsFavoriteComponent = (props) => {
-    const dispatch = useDispatch()
-    const Favorite = useSelector((state) => state.search.data)
-    const [isOpenModal, setIsOpenModal] = useState(false)
+export const IconsFavoriteComponent = ({ image, id, description, likes, date, width, height, openModal }) => {
+  const dispatch = useDispatch();
+  const [isFavorite, setIsFavorite] = useState(true);
 
-    const RemoveFavoriteHandler = (event) => {
-        event.preventDefault()
-        dispatch(removeFavorite(props.id))
-        toast.success('Removed successfully!')
-    }
+  const RemoveFavoriteHandler = () => {
+    dispatch(removeFavorite(id));
+    toast.success('Removed successfully!');
+    setIsFavorite(false); 
+  };
 
-    const openModal = () => {
-        setIsOpenModal(true)
-    }
-
-    const closeModal = () => {
-        setIsOpenModal(false)
-    }
-
-    const ModifyDescriptionHandler = (event) => {
-        event.preventDefault()
-        const value = event.target.elements[0].value
-        dispatch(editDescription({ id: props.id, description: value }))
-        setIsOpenModal(false)
-        toast.success('Updated successfully!')
-    }
-
-    const downloadHandler = () => {
-        saveAs(props.image)
-        toast.success('Downloaded successfully!')
-    }
-
-    return (
-        <>
-            <div className="IconsComponent">
-                <span className="material-symbols-outlined IconsComponent__Icon" onClick={RemoveFavoriteHandler}> heart_minus </span>
-                <span className="material-symbols-outlined IconsComponent__Icon" onClick={openModal}> edit </span>
-                <span className="material-symbols-outlined IconsComponent__Icon" onClick={downloadHandler}> download </span>
-            </div>
-            {isOpenModal ? (
-                <ModalComponent
-                    isOpen={isOpenModal}
-                    onClose={closeModal}
-                    description={props.description}
-                    width={props.width}
-                    height={props.height}
-                    likes={props.likes}
-                    date={props.date}
-                    onSubmit={ModifyDescriptionHandler}
-                />
-            ) : <p></p>}
-        </>
-    )
-}
+  return (
+    <div className="IconsComponent">
+      {isFavorite ? (
+        <span className="material-icons IconsComponent__Icon" onClick={RemoveFavoriteHandler}>
+          favorite
+        </span>
+      ) : (
+        <span className="material-icons IconsComponent__Icon">
+          favorite_border
+        </span>
+      )}
+      <span className="material-icons IconsComponent__Icon" onClick={openModal}>edit</span>
+      <span className="material-icons IconsComponent__Icon" onClick={() => saveAs(image)}>download</span>
+    </div>
+  );
+};

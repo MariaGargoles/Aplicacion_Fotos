@@ -1,0 +1,14 @@
+.IconsComponent {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .IconsComponent__Icon {
+    cursor: pointer;
+    font-size: 24px; 
+  }
+  
+  .IconsComponent__Icon:hover {
+    color: red; 
+  }
+  
