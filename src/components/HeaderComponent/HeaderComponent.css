@@ -13,7 +13,7 @@
 
 .Header__Article__MainTitle {
     font-family: "Caveat", cursive;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 3em;
     padding: 1rem;
     text-transform: uppercase;
@@ -33,10 +33,9 @@
     font-family: "Caveat", cursive;
     font-weight: 800;
     font-size: 1.5em;
-    text-transform: uppercase;
     padding: 1rem 2rem;
     border-radius: 5px;
-    background-color: #d0ece7;
+    background-color: #a2d9ce;
 }
 
 .Header__Article__MyPhotosButton:hover {
@@ -47,6 +46,7 @@
 .Header__VideoContainer {
     display: flex;
     justify-content: center;
+    height: 800px;
 }
 
 .Header__Video {

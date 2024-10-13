@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./PhotosComponent.css";
 import { GetImagesThunk, GetSearchPhotoThunk } from "../../feature/photos/PhotoThunk";
 import { IconsFavoriteComponent } from "../IconFavComponent/IconFavComponent";
-import { ModalComponent } from "../ModalComponent/ModalComponent"; 
+import { ModalComponent } from "../ModalComponent/"; 
 
 export const ImageComponent = () => {
   const dispatch = useDispatch();
