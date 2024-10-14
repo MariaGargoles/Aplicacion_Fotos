@@ -82,7 +82,7 @@ export const ImageComponent = () => {
 
                 
                 <IconsFavoriteComponent
-                  image={image.urls.regular}
+                  image={image.urls.full}
                   id={image.id}
                   description={image.alt_description}
                   likes={image.likes}
