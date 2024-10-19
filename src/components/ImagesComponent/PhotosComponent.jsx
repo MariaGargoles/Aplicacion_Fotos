@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./PhotosComponent.css";
 import { GetImagesThunk, GetSearchPhotoThunk } from "../../feature/photos/PhotoThunk";
 import { IconsFavoriteComponent } from "../IconFavComponent/IconFavComponent";
-import { ModalComponent } from "../ModalComponent/Modalcomponent"; 
+import { ModalComponent } from "../ModalComponent/ModalComponent"; 
 
 export const ImageComponent = () => {
   const dispatch = useDispatch();
@@ -13,12 +13,10 @@ export const ImageComponent = () => {
   const [selectedImage, setSelectedImage] = useState(null); 
   const [isOpenModal, setIsOpenModal] = useState(false); 
 
- 
   const openModalHandler = (image) => {
     setSelectedImage(image);
     setIsOpenModal(true);
   };
-
 
   const closeModalHandler = () => {
     setIsOpenModal(false);
@@ -80,7 +78,6 @@ export const ImageComponent = () => {
                   <strong>Date:</strong> {new Date(image.created_at).toLocaleDateString()}
                 </p>
 
-                
                 <IconsFavoriteComponent
                   image={image.urls.full}
                   id={image.id}

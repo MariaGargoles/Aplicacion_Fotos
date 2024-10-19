@@ -23,7 +23,7 @@ export const ModalComponent = ({ isOpen, onClose, description, width, height, li
                     }}>
                         <div className='ModalComponent'>
                             <span className="material-symbols-outlined ModalComponent__Close" onClick={onClose}>
-                                cancel
+                                Cancel
                             </span>
                             <h2 className="ModalComponent__Title">Description</h2>
                             <textarea

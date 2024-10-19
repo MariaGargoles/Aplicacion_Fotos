@@ -24,21 +24,27 @@ export const GetImagesThunk = createAsyncThunk("Search/GetImages", async () => {
   }
 });
 
-export const GetSearchPhotoThunk = createAsyncThunk('search/getSearchPhoto', async (text) => {
-  try {
-      const response = await fetch(`https://api.unsplash.com/search/photos/?per_page=30&query=${text}`, {
+export const GetSearchPhotoThunk = createAsyncThunk(
+  "search/getSearchPhoto",
+  async (text) => {
+    try {
+      const response = await fetch(
+        `https://api.unsplash.com/search/photos/?per_page=100&query=${text}`,
+        {
           headers: {
             Authorization:
-            "Client-ID T-UKRbKpAszHgiQ2YOzW132ApK0QRo6Hcsg4dVM10rY",
-        },
-      })
+              "Client-ID T-UKRbKpAszHgiQ2YOzW132ApK0QRo6Hcsg4dVM10rY",
+          },
+        }
+      );
       if (response.ok) {
-          const dataSearch = await response.json()
-          console.log(dataSearch)
-          return dataSearch.results
+        const dataSearch = await response.json();
+        console.log(dataSearch);
+        return dataSearch.results;
       }
-      return false
-  } catch (error) {
-      console.log (error)
+      return false;
+    } catch (error) {
+      console.log(error);
+    }
   }
-})
+);
