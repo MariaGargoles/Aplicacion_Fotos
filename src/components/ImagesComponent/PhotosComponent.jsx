@@ -50,7 +50,7 @@ export const ImageComponent = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           value={searchTerm}
         />
-        <span className="material-symbols-outlined InputComponent__content__icon">search</span>
+        <span className="material-symbols-outlined InputComponent__content__icon">Search</span>
       </div>
 
       <div className="image-list">
