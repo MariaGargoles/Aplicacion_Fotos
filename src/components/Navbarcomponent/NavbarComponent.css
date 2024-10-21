@@ -52,7 +52,7 @@ body {
     font-weight: 800;
     font-family: "Caveat", cursive;
     font-size: 2em;
-    text-shadow: 2px 2px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+    text-shadow: 2px 2px 0px #A1C0AA, -1px 1px 0px #E8C6B4, 1px -1px 0px #E8C6B4, -1px -1px 0px #A1C0AA;
     color: #FFFFFF;
     background: linear-gradient(145deg, #A1C0AA, #E8C6B4); 
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5); 
