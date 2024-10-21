@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'; // Importar dispatch
 import { IconsFavoriteComponent } from '../IconFavComponent/IconFavComponent';
 import { ModalComponent } from '../ModalComponent/ModalComponent';
 import "../ImagesComponent/PhotosComponent.css";
+import { editDescription } from '../../feature/favorite/FavoriteSlice'; // Importar la acción de edición
 
 export const FavoritesComponent = () => {
-  const favorites = useSelector((state) => state.favorite.data);
+  const dispatch = useDispatch(); // Para despachar acciones
+  const favorites = useSelector((state) => state.favorite.data); // Obtener el estado de favoritos de Redux
   const [selectedImage, setSelectedImage] = useState(null); 
   const [isOpenModal, setIsOpenModal] = useState(false);
 
@@ -13,14 +15,25 @@ export const FavoritesComponent = () => {
     return <p>No favorites added yet.</p>;
   }
 
+  // Abre el modal con la imagen seleccionada
   const openModalHandler = (image) => {
     setSelectedImage(image);
     setIsOpenModal(true);
   };
 
+  // Cierra el modal
   const closeModalHandler = () => {
     setIsOpenModal(false);
     setSelectedImage(null); 
+  };
+
+  // Función para actualizar la descripción de una imagen favorita
+  const updateDescriptionHandler = (newDescription) => {
+    dispatch(editDescription({ 
+      id: selectedImage.id, 
+      description: newDescription 
+    })); // Despachar la acción de editar la descripción
+    closeModalHandler(); // Cierra el modal después de guardar los cambios
   };
 
   return (
@@ -33,7 +46,7 @@ export const FavoritesComponent = () => {
             className="ImagesContainer__img"
             width={favorite.width}
             height={favorite.height}
-            onClick={() => openModalHandler(favorite)} // Abre el modal al hacer clic en la imagen
+            onClick={() => openModalHandler(favorite)} 
           />
           <div className="ImagesContainer__data">
             <p className="data__text">
@@ -41,6 +54,9 @@ export const FavoritesComponent = () => {
             </p>
             <p className="data__text">
               <strong>Date:</strong> {favorite.date}
+            </p>
+            <p className="data__text">
+              <strong>Description:</strong> {favorite.description}
             </p>
             <IconsFavoriteComponent
               image={favorite.image}
@@ -65,12 +81,7 @@ export const FavoritesComponent = () => {
           height={selectedImage.height}
           likes={selectedImage.likes}
           date={selectedImage.date}
-          onSubmit={(event) => {
-            event.preventDefault();
-            const value = event.target.elements[0].value;
-            console.log("New description:", value);
-            closeModalHandler();
-          }}
+          onSubmit={updateDescriptionHandler} // Pasamos la función para actualizar la descripción
         />
       )}
     </div>

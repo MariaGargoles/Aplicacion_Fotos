@@ -1,64 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
-    background-image: url("../../assets/3421.jpg");
+    background-color: #AED5C3; 
+}
+
+
+.NavarContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0em 0.18em 0.3em 0em rgba(0, 0, 0, 0.29); 
+    background-image: url("../../assets/navbar2.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.NavarContainer {
- display: flex;
- justify-content: space-around;
-    align-items: center;
-    box-shadow: 0em 0.18em 0.3em 0em rgba(0, 0, 0, 0.29);
-    background-image: url("../../assets/4907198.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
 
 .NavarContainerimg {
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem;
-    
-    
 }
 
 .NavarContainer__imagen1 {
-    width: 20%;
-    
-}
-
-.NavarContainer__MainTitle {
-   font-family: "Ribeye Marrow", serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1.7em;
-   padding: 1rem;
-   text-transform: uppercase;
+    width: 10rem; 
+    height: auto;
+    transform: translateX(150%) translateY(-7%);
 }
 
 
 .NavarContainer__Menu {
-    display: inline-flex;
+    display: flex;
+    gap: 40px; 
     padding-top: 1rem;
-    margin-right: 1rem;
-    font-family: "Roboto", sans-serif;
 }
+
 
 .NavarContainer__Menu--item {
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 5px; 
     text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+    font-weight: 800;
     font-family: "Caveat", cursive;
-    font-size: 1.7em;
+    font-size: 2em;
+    text-shadow: 2px 2px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+    color: #FFFFFF;
+    background: linear-gradient(145deg, #A1C0AA, #E8C6B4); 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease; 
 }
 
+
+.NavarContainer__Menu--item:hover {
+    background: linear-gradient(145deg, #E8C6B4, #A1C0AA); 
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.7); 
+    color: #FFFFFF;
+}

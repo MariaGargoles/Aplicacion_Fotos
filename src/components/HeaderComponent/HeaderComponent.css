@@ -1,6 +1,9 @@
 .Header {
   align-content: center;
   margin-bottom: 3rem;
+  background-image: url("../../assets/footer2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Header__Article {
@@ -34,12 +37,17 @@
     font-size: 1.5em;
     padding: 1rem 2rem;
     border-radius: 5px;
-    background-color: #a2d9ce;
+    text-shadow: 2px 2px 0px black, -1px 1px 0px black, 1px -1px 0px black, -1px -1px 0px black;
+    color: #FFFFFF;
+    background:  #E8C6B4; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease; 
 }
 
 .Header__Article__MyPhotosButton:hover {
-    
-    background-color:  #73c6b6;
+    background:  #A1C0AA; 
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.7); 
+    color: #FFFFFF;
 }
 
 .Header__VideoContainer {

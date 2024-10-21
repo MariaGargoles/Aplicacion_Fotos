@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import media from "../../assets/medium.mp4"
+
 import "./HeaderComponent.css"
 
 
@@ -15,10 +15,7 @@ return(
         Contamos con más de 1 millón de imágenes gracias a Unplash.</p>
         <NavLink to={"/MyPhotos"}><button className="Header__Article__MyPhotosButton">My Photos</button></NavLink>
     </article>
-    <article className="Header__VideoContainer">
-        <video  className="Header__Video" src={media} loop autoPlay/>
-    </article>
-
+    
 </main>
 
 )}

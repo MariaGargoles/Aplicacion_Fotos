@@ -105,10 +105,8 @@ export const ImageComponent = () => {
           height={selectedImage.height}
           likes={selectedImage.likes}
           date={new Date(selectedImage.created_at).toLocaleDateString()}
-          onSubmit={(event) => {
-            event.preventDefault();
-            const value = event.target.elements[0].value;
-            console.log("New description:", value);
+          onSubmit={(newDescription) => {
+            console.log("New description:", newDescription);
             closeModalHandler(); 
           }}
         />

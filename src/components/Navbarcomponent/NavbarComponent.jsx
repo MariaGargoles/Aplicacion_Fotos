@@ -9,8 +9,8 @@ export const NavbarComponent = () => {
         <nav className='NavarContainer'> 
             
             <div className='NavarContainerimg'>
-                {/*<img src={logo} alt="Logo" className='NavarContainer__imagen1' />*/} 
-                <h1 className='NavarContainer__MainTitle'>image galery</h1>
+                <img src={logo} alt="Logo" className='NavarContainer__imagen1' />
+                
             </div>
             <ul className='NavarContainer__Menu'>
                 <NavLink  to="/" className='NavarContainer__Menu--item'>Home</NavLink >
