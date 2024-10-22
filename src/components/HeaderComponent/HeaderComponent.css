@@ -20,6 +20,9 @@
     font-size: 3em;
     padding: 1rem;
     text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px #A1C0AA, -1px 1px 0px #A1C0AA, 1px -1px 0px #A1C0AA, -1px -1px 0px #A1C0AA;
+
 }
 
 .Header__Article__Text {
@@ -27,6 +30,8 @@
     font-weight: 500;
     font-size: 2em;
     padding: 1rem;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0px #A1C0AA, -1px 1px 0px #A1C0AA, 1px -1px 0px #A1C0AA, -1px -1px 0px #A1C0AA;
 }
 
 .Header__Article__MyPhotosButton {
